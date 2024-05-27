@@ -8,15 +8,12 @@
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <nav>
-                <a id="aboutLink" href="#intro">About Me</a>
-                <a id="experienceLink" href="#experience">Experience</a>
-                <a id="contactLink" href="#contact">Contact Me</a>
-                <a id="resumeLink" href="#resume">Resume</a>
-            </nav>
-            <button id="menuToggle">&#9776;</button> <!-- Hamburger Icon for Mobile Menu Toggle -->
-        </div>
+        <nav>
+            <a id="aboutLink" href="#intro">About Me</a>
+            <a id="experienceLink" href="#experience">Experience</a>
+            <a id="contactLink" href="#contact">Contact Me</a>
+            <a id="resumeLink" href="#resume">Resume</a>
+        </nav>
     </header>
    
     <section class="intro" id="intro">
@@ -29,6 +26,7 @@
         </div>
     </section>
 	
+    
     <section id="experience" style="display:none;">
         <h1>Experience</h1>
         <p>In the professional realm, Ameen has served as an Associated Developer with John Tyler, where he actively contributed to the creation and maintenance of software applications. His responsibilities included implementing algorithms, writing efficient code, and ensuring software quality through rigorous testing and debugging. Ameen's attention to detail and problem-solving abilities have been instrumental in his roles, where he has also assisted in upgrading and modifying existing software systems.</p>
@@ -53,11 +51,6 @@
     </section>
     
     <script>
-        // Script for Mobile Menu Toggle
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.querySelector('.nav-container nav').classList.toggle('active');
-        });
-
         document.getElementById('contactLink').addEventListener('click', function(event) {
             event.preventDefault();
             window.location.href = "mailto:aminuddin08@gmail.com";
@@ -91,5 +84,7 @@
             });
         }
     </script>
+
+   
 </body>
 </html>
