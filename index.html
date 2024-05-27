@@ -50,17 +50,23 @@
         <p>Oops, there is nothing publicly available at this time!</p>
     </section>
     <script>
-        // JavaScript to handle navigation
-        document.querySelectorAll('nav a').forEach(function(elem) {
-            elem.addEventListener('click', function(event) {
-                event.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
-                document.querySelectorAll('section').forEach(function(section) {
-                    section.style.display = 'none';
-                });
-                target.style.display = 'block';
-            });
-        });
-    </script>
+    // JavaScript to handle navigation
+    	document.querySelectorAll('nav a').forEach(function(elem) {
+        	elem.addEventListener('click', function(event) {
+            	event.preventDefault();
+            	var targetId = this.getAttribute('href');
+            	var target = document.querySelector(targetId);
+            	document.querySelectorAll('section').forEach(function(section) {
+                	section.style.display = 'none';
+            	});
+            	target.style.display = 'block';
+            	// Scroll to the target section
+            	window.scrollTo({
+                	top: target.offsetTop,
+                	behavior: 'smooth'
+            	});
+        	});
+    	});
+	</script>
 </body>
 </html>
