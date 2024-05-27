@@ -9,23 +9,24 @@
 <body>
     <header>
         <nav>
+
             <a id="aboutLink" href="#intro">About Me</a>
             <a id="experienceLink" href="#experience">Experience</a>
             <a id="contactLink" href="#contact">Contact Me</a>
             <a id="resumeLink" href="#resume">Resume</a>
         </nav>
     </header>
-   
+    
     <section class="intro" id="intro">
-        <div class="intro-content">
-            <h1>Nice to meet you. My name is</h1>
-            <h2>Ameen Zia.</h2>
-            <h3>I craft digital experiences for the web.</h3>
-            <p>As a seasoned software developer, I bring a comprehensive skill set to the table, including proficiency in Java, Python, C#, HTML, and more. My familiarity with Agile methodology ensures efficient project execution, while my experience with cloud architecture and database technologies adds depth to my capabilities.</p>
-            <p>Whether you're seeking assistance with full-stack development, database management, or cloud deployment, you've come to the right place. With a keen eye for detail and a commitment to excellence, I strive to deliver solutions that exceed expectations.</p>
-        </div>
+        <h1>Nice to meet you. My name is</h1>
+        <h2>Ameen Zia.</h2>
+        <h3>I craft digital experiences for the web.</h3>
+        
+        <p>As a seasoned software developer, I bring a comprehensive skill set to the table, including proficiency in Java, Python, C#, HTML, and more. My familiarity with Agile methodology ensures efficient project execution, while my experience with cloud architecture and database technologies adds depth to my capabilities.</p>
+        <p>Whether you're seeking assistance with full-stack development, database management, or cloud deployment, you've come to the right place. With a keen eye for detail and a commitment to excellence, I strive to deliver solutions that exceed expectations.</p>
+        
     </section>
-	
+
     
     <section id="experience" style="display:none;">
         <h1>Experience</h1>
@@ -62,8 +63,6 @@
         });
 
         document.getElementById('aboutLink').addEventListener('click', function(event) {
-            // event.preventDefault(); // No need to prevent default behavior
-            // Reload the page when the "About Me" link is clicked
             window.location.reload();
         });
 
