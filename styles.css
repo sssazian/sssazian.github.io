@@ -1,33 +1,97 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #001f3f;
-    color: #fff;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    background-color: #0a192f;
+    color: #8892b0;
 }
 
 header {
-    background-color: #001f3f;
-    padding: 20px;
+    background-color: #0a192f;
+    padding: 20px 150px;
     text-align: right;
+    position: relative;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav {
+    display: flex;
+}
+
+nav.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #0a192f;
+    padding: 10px 20px;
+    flex-direction: column;
+}
+
+nav.active a {
+    margin: 10px 0;
+}
+
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64ffda;
+    cursor: pointer;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 0 150px;
+}
+
+.intro h1 {
+    text-align: left;
+    margin: 0 0 30px 4px;
+    color: #64ffda;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.intro h2 {
+    text-align: left;
+    margin: 0;
+    font-size: 80px;
+    font-weight: 600;
+    color: #ccd6f6;
+    line-height: 1.1;
+}
+
+.intro h3 {
+    margin: 10px 0;
+    font-size: 60px;
+    font-weight: 600;
+    color: #8892b0;
+    line-height: 1.1;
+}
+
+.intro p {
+    margin: 20px 0 0;
+    max-width: 540px;
 }
 
 section {
-    padding: 50px;
+    padding: 50px 150px;
 }
 
 h1, h2 {
     text-align: center;
+    color: #ccd6f6;
 }
 
 ul {
@@ -40,9 +104,29 @@ ul li {
 }
 
 a {
-    color: #1e90ff;
+    color: #64ffda;
+    text-decoration: none;
 }
 
 a:hover {
     color: #fff;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    #menuToggle {
+        display: block;
+    }
 }
