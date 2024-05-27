@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameen Zia's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to Ameen Zia's Portfolio</h1>
+        <p>Welcome to Ameen Zia's professional hub!</p>
+    	<p>Here, you'll find a wealth of expertise in software development, honed through years of hands-on experience and a dedication to continuous learning.</p>
+    	<p>As a seasoned software developer, I bring a comprehensive skill set to the table, including proficiency in Java, Python, C#, HTML, and more. My familiarity with Agile methodology ensures efficient project execution, while my experience with cloud architecture and database technologies adds depth to my capabilities.</p>
+    	<p>Whether you're seeking assistance with full-stack development, database management, or cloud deployment, you've come to the right place. With a keen eye for detail and a commitment to excellence, I strive to deliver solutions that exceed expectations.</p>
+    	<p>Browse through my portfolio and technical skills to discover how I can help bring your software projects to life. Let's collaborate and make your digital ambitions a reality.</p>
+    </section>
+    <section id="about" style="display:none;">
+        <h1>About Me</h1>
+        <p>Ameen is a results-driven software developer with a passion for European and Japanese cars, alongside a keen interest in learning and reading. With a proven track record in collaborative environments, Ameen brings expertise in Java, C#, Python, and C++ to the table, coupled with familiarity with Agile methodology.</p>
+        <br>
+	<h2>Skills:</h2>
+        <p>Programming Languages & Technologies: Java, Python, C, C#, HTML, CSS, JavaScript, TypeScript, ASP.NET, .NET, Node.js, Angular, JavaScript/TypeScript, HTML5, XML</p>
+        <p>Development Tools & Environments: Git, Microsoft Office, Jira, AWS, macOS, Linux, Windows</p>
+        <p>Database & Cloud Technologies: SQL, Oracle, AWS, Cloud Architecture, APIs</p>
+        <p>Agile Methodologies & Project Management: Agile, Full-stack Development, SAP</p>
+        <h2>Experiences:</h2>
+        <p>In the professional realm, Ameen has served as an Associated Developer with John Tyler, where he actively contributed to the creation and maintenance of software applications. His responsibilities included implementing algorithms, writing efficient code, and ensuring software quality through rigorous testing and debugging. Ameen's attention to detail and problem-solving abilities have been instrumental in his roles, where he has also assisted in upgrading and modifying existing software systems.</p>
+        <p>Previously, Ameen worked as a Developer at the Toronto East Health Network, where he played a pivotal role in developing and integrating software components for clinic management systems. His contributions extended to analyzing and planning new system installations, as well as supporting software adaptation to new hardware configurations. Ameen's commitment to excellence is reflected in his dedication to documenting technical specifications and maintaining comprehensive reports for software projects.</p>
+        <h2>Languages:</h2>
+        <ul>
+            <li>English</li>
+            <li>French</li>
+            <li>Hindi</li>
+            <li>Japanese</li>
+        </ul>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:aminuddin08@gmail.com">aminuddin08@gmail.com</a></p>
+        <p>Phone: 804-273-7835</p>
+    </section>
+    <section id="projects" style="display:none;">
+        <h1>Projects</h1>
+        <p>Oops, there is nothing publicly available at this time!</p>
+    </section>
+    <script>
+        // JavaScript to handle navigation
+        document.querySelectorAll('nav a').forEach(function(elem) {
+            elem.addEventListener('click', function(event) {
+                event.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                document.querySelectorAll('section').forEach(function(section) {
+                    section.style.display = 'none';
+                });
+                target.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
