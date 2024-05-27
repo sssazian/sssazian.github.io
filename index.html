@@ -9,8 +9,8 @@
 <body>
     <header>
         <nav>
-            <a href="#about">About Me</a>
-            <a href="#experience">Experience</a>
+            <a id="aboutLink" href="#about">About Me</a>
+            <a id="experienceLink" href="#experience">Experience</a>
             <a id="contactLink" href="#contact">Contact Me</a>
             <a id="resumeLink" href="#resume">Resume</a>
         </nav>
@@ -49,23 +49,38 @@
     </section>
     
     <script>
-        document.addEventListener('click', function(event) {
-            var contactLinkRect = document.getElementById('contactLink').getBoundingClientRect();
-            var resumeLinkRect = document.getElementById('resumeLink').getBoundingClientRect();
-            var mouseX = event.clientX;
-            var mouseY = event.clientY;
-
-            if (
-                (mouseX >= contactLinkRect.left && mouseX <= contactLinkRect.right && mouseY >= contactLinkRect.top && mouseY <= contactLinkRect.bottom) ||
-                (mouseX >= resumeLinkRect.left && mouseX <= resumeLinkRect.right && mouseY >= resumeLinkRect.top && mouseY <= resumeLinkRect.bottom)
-            ) {
-                if (event.target.id === 'contactLink') {
-                    window.location.href = "mailto:aminuddin08@gmail.com";
-                } else if (event.target.id === 'resumeLink') {
-                    window.open("resume.pdf", "_blank");
-                }
-            }
+        document.getElementById('contactLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "mailto:aminuddin08@gmail.com";
         });
+
+        document.getElementById('resumeLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.open("resume.pdf", "_blank");
+        });
+
+        document.getElementById('aboutLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            var target = document.getElementById('about');
+            scrollToSection(target);
+        });
+
+        document.getElementById('experienceLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            var target = document.getElementById('experience');
+            scrollToSection(target);
+        });
+
+        function scrollToSection(target) {
+            document.querySelectorAll('section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            target.style.display = 'block';
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
