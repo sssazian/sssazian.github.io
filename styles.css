@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     margin: 0;
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
@@ -29,12 +31,12 @@ nav a:hover {
     justify-content: center;
     align-items: flex-start;
     min-height: 80vh;
-    padding: 0 150px;
+    padding: 0 20px;
 }
 
 .intro h1 {
     text-align: left;
-    margin: 0 0 30px 4px;
+    margin: 0 0 20px 4px;
     color: #64ffda;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     font-size: 16px;
@@ -44,7 +46,7 @@ nav a:hover {
 .intro h2 {
     text-align: left;
     margin: 0;
-    font-size: 80px;
+    font-size: 40px;
     font-weight: 600;
     color: #ccd6f6;
     line-height: 1.1;
@@ -52,7 +54,7 @@ nav a:hover {
 
 .intro h3 {
     margin: 10px 0;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
     color: #8892b0;
     line-height: 1.1;
@@ -61,6 +63,20 @@ nav a:hover {
 .intro p {
     margin: 20px 0 0;
     max-width: 540px;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        padding: 0 150px;
+    }
+
+    .intro h2 {
+        font-size: 80px;
+    }
+
+    .intro h3 {
+        font-size: 60px;
+    }
 }
 
 section {
@@ -87,7 +103,5 @@ a {
 
 a:hover {
     color: #fff;
-
     text-decoration: underline;
-
 }
